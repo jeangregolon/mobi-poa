@@ -1,0 +1,154 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Layout */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+header {
+  grid-area: header;
+  background-color: #14213d;
+}
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+footer {
+  grid-area: footer;
+  background-color: #14213d;
+  color: #ffffff;
+}
+/* Common */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: #fca311;
+}
+/* Header */
+header a {
+  color: #ffffff;
+  padding: 1rem;
+  font-size: 3rem;
+}
+a.brand {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.row.center {
+  justify-content: center;
+}
+
+/* Card */
+.card {
+  border: 0.1rem #e0e0e0 solid;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  justify-content: left;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #e5e5e5;
+  border: 0.1rem #fca311 solid;
+}
+
+.card-item {
+  padding: 1rem;
+}
+
+.line-name {
+  color: #14213d;
+  font-size: 1.7rem;
+  padding-right: 1rem;
+}
+
+.line-code {
+  font-weight: bold;
+  color: #fca311;
+  padding: 0 1rem;
+}
+
+.line-lat{
+  color: #fca311;
+}
+
+.line-lng{
+  padding-left: 2rem;
+  color: #14213d;
+}
+
+.danger {
+  color: #a02020;
+}
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+.alert-info {
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+.alert-danger {
+  color: #a02020;
+  background-color: #ffe0e0;
+}
+
+/* Search */
+.search-box {
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+}
+.search-label {
+  position: relative;
+}
+.container input {
+  width: 100%;
+  padding: 16px;
+  font-size: 2.5rem;
+  font-style: italic;
+  color: #444;
+  box-sizing: border-box;
+  outline: none;
+  flex-wrap: nowrap;
+}
+
+.search-icon {
+  position: absolute;
+  top: -10px;
+  font-size: 2.5rem;
+  color: #555;
+  right: 18px;
+}
